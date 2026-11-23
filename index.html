@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#b8c6b3" />
+    <title>Sanjeev & Lakshmi – Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="intro" id="intro">
+      <div class="intro-glow"></div>
+      <button class="envelope" id="open-invitation" type="button" aria-label="Open wedding invitation">
+        <span class="envelope-art">
+          <span class="wax-seal">S<span>&amp;</span>L</span>
+        </span>
+        <strong>You’re Invited</strong>
+        <small>Tap to open</small>
+      </button>
+    </div>
+
+    <main>
+      <section class="cover panel" aria-label="Wedding cover">
+        <img src="assets/sanjeev.png" alt="Sanjeev" />
+        <div class="cover-shade"></div>
+        <div class="cover-copy">
+          <p>With love</p>
+          <h1>Sanjeev <span>&amp;</span> Lakshmi</h1>
+        </div>
+        <button class="scroll-cue" type="button" data-scroll="#date-section" aria-label="Scroll to wedding details">
+          Scroll
+          <span>⌄</span>
+        </button>
+      </section>
+
+      <section class="date-section panel" id="date-section">
+        <p class="eyebrow">Save the date</p>
+        <h2>Our Forever Begins</h2>
+
+        <div class="scratch-card">
+          <p>Scratch to reveal</p>
+          <canvas id="scratch-canvas" width="600" height="220" aria-label="Scratch card revealing the wedding date"></canvas>
+          <div class="scratch-answer">06 December 2026</div>
+        </div>
+
+        <div class="countdown" aria-label="Countdown to the wedding">
+          <div><strong id="days">000</strong><span>Days</span></div>
+          <div><strong id="hours">00</strong><span>Hours</span></div>
+          <div><strong id="minutes">00</strong><span>Minutes</span></div>
+          <div><strong id="seconds">00</strong><span>Seconds</span></div>
+        </div>
+      </section>
+
+      <section class="schedule panel">
+        <p class="eyebrow">The celebration</p>
+        <h2>Wedding Schedule</h2>
+        <div class="timeline">
+          <article>
+            <span>12:24 PM</span>
+            <div>
+              <h3>Muhurtham</h3>
+              <p>The sacred wedding ceremony</p>
+            </div>
+          </article>
+          <article>
+            <span>After Ceremony</span>
+            <div>
+              <h3>Reception</h3>
+              <p>Lunch and warm wishes</p>
+            </div>
+          </article>
+          <article>
+            <span>Following Day</span>
+            <div>
+              <h3>Blessings</h3>
+              <p>A gathering with family and friends</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="invitation-art panel">
+        <div class="arch">
+          <div class="arch-inner">
+            <span class="flourish">❦</span>
+            <p class="kicker">A precious union</p>
+            <h2>Awaiting Your<br />Noble Presence</h2>
+            <p class="kannada">ವಿವಾಹ ಮಹೋತ್ಸವಕ್ಕೆ<br />ನಿಮ್ಮ ಸಾನಿಧ್ಯವೇ ಸರ್ವೇಸುಗಳೆ</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="family panel">
+        <p class="eyebrow">With love</p>
+        <h2>The Family</h2>
+        <div class="ornament"><span>♥</span></div>
+        <p>With the blessings of our families,<br />we joyfully invite you to celebrate<br />our wedding.</p>
+        <div class="family-names">
+          <div><strong>Sanjeev</strong><small>&amp; family</small></div>
+          <b>and</b>
+          <div><strong>Lakshmi</strong><small>&amp; family</small></div>
+        </div>
+      </section>
+
+      <section class="venue panel">
+        <p class="eyebrow">Where we celebrate</p>
+        <h2>The Wedding Venue</h2>
+        <p class="venue-name">Nagarmunoli, Chikkodi</p>
+        <p class="venue-place">Belagavi District, Karnataka</p>
+        <iframe
+          title="Wedding venue map"
+          src="https://www.google.com/maps?q=Nagarmunoli%2C%20Chikkodi%2C%20Belagavi&output=embed"
+          loading="lazy"
+        ></iframe>
+        <a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Nagarmunoli%2C%20Chikkodi%2C%20Belagavi" target="_blank" rel="noopener">Open in Google Maps</a>
+      </section>
+
+      <section class="gallery panel">
+        <p class="eyebrow">A moment to remember</p>
+        <h2>Our Wedding</h2>
+        <div class="photo-grid">
+          <figure><img src="assets/sanjeev.png" alt="Sanjeev portrait" /></figure>
+          <figure class="photo-placeholder"><span>L</span><small>Lakshmi</small></figure>
+        </div>
+      </section>
+
+      <footer class="closing panel">
+        <p>With love</p>
+        <h2>Sanjeev <span>&amp;</span> Lakshmi</h2>
+        <strong>#sanjeevwedslakshmi</strong>
+        <button id="share-button" type="button">Share Invitation</button>
+      </footer>
+    </main>
+
+    <div class="toast" id="toast" role="status">Invitation link copied</div>
+    <script src="script.js"></script>
+  </body>
+</html>
